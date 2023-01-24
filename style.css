@@ -1,176 +1,284 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-#gameboard{
+#gameboard {
     width: 100%;
     height: 100vh;
     position: relative;
     overflow: hidden;
-    background-image: url(./assets/city.jpg);
-    background-size: cover;    
-    /* border-bottom: solid green 75px; */
-    /* background: brown; */
+    background-image: url(./assets/apocalypse-survivor-concept-ruins-city-2115392.jpg);
+    background-size: cover;
+    background-position: bottom;
 }
 
-p{
-  font-size: 196px;
-  text-align: center;
-  color: white;
-  cursor: default;
-  animation: pulse 1s linear infinite;
+@font-face {
+    font-family: zombie;
+    src: url(./assets/Zombie\ Apocalypse.ttf);
 }
 
-.gameover{
+p {
+    font-size: 180px;
+    font-family: zombie;
+    color: blue;
+    cursor: default;
+    animation: pulse 1s linear infinite;
+    position: absolute;
+    margin-left: 25vh;
+}
+
+.gameover {
     visibility: hidden;
+    margin-left: 15vh;
+}
+
+.gameover2 {
+    margin-top: 200px;
+    visibility: hidden;
+    margin-left: 45vh;
     color: red;
 }
 
-.person{
+
+.person {
     position: absolute;
     bottom: 0;
     margin-left: 100px;
 }
 
-.ammunition{
+.ammunition {
     position: absolute;
     bottom: 0;
-    left: -100px; 
-    visibility: hidden;  
+    left: -100px;
+    visibility: hidden;
 }
 
-.shot{
+.shot {
     animation: shot 300ms linear;
     visibility: visible;
 }
 
-#first{
+#first {
     position: absolute;
     right: -360px;
     bottom: 0;
     height: 310px;
     transform: rotatey(180deg);
-    
+
 }
 
-#second{
+#second {
     position: absolute;
     right: -910px;
     bottom: 0;
     height: 310px;
-    transform: rotatey(180deg);   
+    transform: rotatey(180deg);
 }
 
-#third{
+#third {
     position: absolute;
     right: -1510px;
     bottom: 0;
     height: 310px;
-    transform: rotatey(180deg); 
+    transform: rotatey(180deg);
 }
 
-#fourth{
+#fourth {
     position: absolute;
     right: -2110px;
     bottom: 0;
     height: 310px;
-    transform: rotatey(180deg); 
+    transform: rotatey(180deg);
 }
 
-#fifth{
+#fifth {
     position: absolute;
     right: -2710px;
     bottom: 0;
     height: 310px;
-    transform: rotatey(180deg); 
+    transform: rotatey(180deg);
 }
 
-.move{
+.move {
     animation: move 10s infinite linear;
 }
 
-.smove{
+.smove {
     animation: smove 11s infinite linear;
 }
 
-.tmove{
+.tmove {
     animation: tmove 12s infinite linear;
 }
 
-.fmove{
+.fmove {
     animation: tmove 13s infinite linear;
 }
 
-.ffmove{
+.ffmove {
     animation: tmove 14s infinite linear;
 }
 
-@keyframes shot{
-    from{
+@keyframes shot {
+    from {
         left: 320px;
     }
-    to{
+
+    to {
         left: 100%;
     }
-    }
+}
 
-@keyframes move{
-    from{
+@keyframes move {
+    from {
         rigth: -360px;
     }
-    to{
+
+    to {
         right: 100%;
     }
 }
 
-@keyframes smove{
-    from{
+@keyframes smove {
+    from {
         rigth: -910px;
     }
-    to{
+
+    to {
         right: 100%;
     }
 }
 
-@keyframes tmove{
-    from{
+@keyframes tmove {
+    from {
         rigth: -1510px;
     }
-    to{
+
+    to {
         right: 100%;
     }
 }
 
-@keyframes fmove{
-    from{
+@keyframes fmove {
+    from {
         rigth: -2110px;
     }
-    to{
+
+    to {
         right: 100%;
     }
 }
 
-@keyframes ffmove{
-    from{
+@keyframes ffmove {
+    from {
         rigth: -2710px;
     }
-    to{
+
+    to {
         right: 100%;
     }
 }
 
-@keyframes pulse{
-    0%{
+@keyframes pulse {
+    0% {
         opacity: 10%;
     }
 
-    50%{
+    50% {
         opacity: 100%;
     }
 
-    100%{
+    100% {
         opacity: 10%;
     }
+}
+
+@media screen and (max-width: 900px) {
+
+    p {
+        font-size: 86px;
+        margin-left: 25vh;
+
+    }
+
+    .gameover2 {
+        margin-top: 100px;
+    }
+
+    .person {
+        height: 250px;
+    }
+
+    #first {
+        height: 150px;
+    }
+
+    #second {
+        height: 150px;
+
+    }
+
+    #third {
+        height: 150px;
+    }
+
+    #fourth {
+        height: 150px;
+
+    }
+
+    #fifth {
+        height: 150px;
+    }
+
+    .ammunition {
+        height: 250px;
+    }
+
+    @keyframes shot {
+        from {
+            left: 220px;
+        }
+
+        to {
+            left: 100%;
+        }
+    }
+
+}
+
+@media screen and (max-width: 415px) {
+
+    p {
+        font-size: 64px;
+        margin-left: 8vh;
+        margin-top: 200px;
+
+    }
+
+    .gameover{
+        margin-left: 8vh;
+    }
+
+    .gameover2 {
+        margin-top: 400px;
+        margin-left: 2vh;
+    }
+
+    .person {
+        margin-left: 0px;
+    }
+
+    @keyframes shot {
+        from {
+            left: 120px;
+        }
+
+        to {
+            left: 100%;
+        }
+    }
+
 }
