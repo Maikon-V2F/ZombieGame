@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#gameboard{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-image: url(./assets/city.jpg);
+    background-size: cover;    
+    /* border-bottom: solid green 75px; */
+    /* background: brown; */
+}
+
+p{
+  font-size: 196px;
+  text-align: center;
+  color: white;
+  cursor: default;
+  animation: pulse 1s linear infinite;
+}
+
+.gameover{
+    visibility: hidden;
+    color: red;
+}
+
+.person{
+    position: absolute;
+    bottom: 0;
+    margin-left: 100px;
+}
+
+.ammunition{
+    position: absolute;
+    bottom: 0;
+    left: -100px; 
+    visibility: hidden;  
+}
+
+.shot{
+    animation: shot 300ms linear;
+    visibility: visible;
+}
+
+#first{
+    position: absolute;
+    right: -360px;
+    bottom: 0;
+    height: 310px;
+    transform: rotatey(180deg);
+    
+}
+
+#second{
+    position: absolute;
+    right: -910px;
+    bottom: 0;
+    height: 310px;
+    transform: rotatey(180deg);   
+}
+
+#third{
+    position: absolute;
+    right: -1510px;
+    bottom: 0;
+    height: 310px;
+    transform: rotatey(180deg); 
+}
+
+#fourth{
+    position: absolute;
+    right: -2110px;
+    bottom: 0;
+    height: 310px;
+    transform: rotatey(180deg); 
+}
+
+#fifth{
+    position: absolute;
+    right: -2710px;
+    bottom: 0;
+    height: 310px;
+    transform: rotatey(180deg); 
+}
+
+.move{
+    animation: move 10s infinite linear;
+}
+
+.smove{
+    animation: smove 11s infinite linear;
+}
+
+.tmove{
+    animation: tmove 12s infinite linear;
+}
+
+.fmove{
+    animation: tmove 13s infinite linear;
+}
+
+.ffmove{
+    animation: tmove 14s infinite linear;
+}
+
+@keyframes shot{
+    from{
+        left: 320px;
+    }
+    to{
+        left: 100%;
+    }
+    }
+
+@keyframes move{
+    from{
+        rigth: -360px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes smove{
+    from{
+        rigth: -910px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes tmove{
+    from{
+        rigth: -1510px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes fmove{
+    from{
+        rigth: -2110px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes ffmove{
+    from{
+        rigth: -2710px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes pulse{
+    0%{
+        opacity: 10%;
+    }
+
+    50%{
+        opacity: 100%;
+    }
+
+    100%{
+        opacity: 10%;
+    }
+}
