@@ -1,34 +1,24 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zombie hunter</title>
+    <title>Log in</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="icon"  href="./assets/zombie2.png">
 </head>
-
 <body>
-    <div id="gameboard">
-        <img src="./assets/ammunition.png" class="ammunition">
-        <img src="./assets/person.png" class="person">
-        <img src="./assets/5d5ed2917f0a764ce2123f35cc353240.gif" id="first">
-        <img src="./assets/5d5ed2917f0a764ce2123f35cc353240.gif" id="second">
-        <img src="./assets/5d5ed2917f0a764ce2123f35cc353240.gif" id="third">
-        <img src="./assets/5d5ed2917f0a764ce2123f35cc353240.gif" id="fourth">
-        <img src="./assets/5d5ed2917f0a764ce2123f35cc353240.gif" id="fifth">
-
-        <audio src="./assets/death.mp3" id="death"></audio>
-        <audio src="./assets/headshot.mp3" id="headshot"></audio>
-        <audio src="./assets/soundshot.mp3" id="soundshot"></audio>
-
-        <p class="taptoplay">Click to play</p>
-        <p class="gameover">Click to replay</p>
-        <p class="gameover2">Game Over</p>
+ <div id="container">
+    <p>Email:</p>
+    <input type="email" placeholder="exemplo@email.com" class="input" id="email">
+    <p>Senha:</p>
+    <input type="password" placeholder="********" class="input" id="password">
+    <input type="submit" id="submit" onclick="check()">
+    <div id="text">
     </div>
-    <script src="./scriot.js"></script>
-</body>
+    <a href="'https://maikon-v2f.github.io/zombiehunter/'" id="linkk">Abrir 'Zombie Game'</a>
 
+    <script src="./script.js"></script>
+ </div>
+</body>
 </html>
